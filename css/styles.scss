@@ -1,0 +1,112 @@
+// # Front-end Style Guide
+
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+// ### Primary
+
+// - Violet: hsl(257, 40%, 49%)
+// - Soft Magenta: hsl(300, 69%, 71%)
+
+// ## Typography
+
+// ### Headings
+
+// - Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+// - Weights: 400, 600
+
+// ### Body
+
+// - Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+// - Weights: 400
+
+// ## Icons
+
+// For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+// - [Font Awesome](https://fontawesome.com/)
+// - [IcoMoon](https://icomoon.io/)
+// - [Ionicons](https://ionicons.com/)
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: hsl(257, 40%, 49%);
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  max-width: 375px;
+  display: grid;
+}
+
+img {
+  width: 100%;
+}
+
+.logo {
+  width: 40%;
+  margin-top: 10%;
+}
+
+.section {
+  &__title {
+    font-weight: 600;
+    color: #fff;
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  &__description {
+    color: #eee;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  &__button {
+    font-weight: 400;
+    font-size: 16px;
+    color: hsl(257, 40%, 49%);
+    border: none;
+    background-color: #fff;
+    padding: 14px;
+    width: 200px;
+    border-radius: 50px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.media {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  gap: 10px;
+  &__item {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  &__icon {
+    color: #fff;
+  }
+}
