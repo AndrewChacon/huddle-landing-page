@@ -61,6 +61,8 @@ img {
   border-radius: 50px;
   -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
 }
 
 .media {
@@ -90,5 +92,60 @@ img {
 
 .media__icon {
   color: #fff;
+}
+
+@media (min-width: 1000px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: logo;
+    width: 30%;
+  }
+  .graphic {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: graphic;
+  }
+  .section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: section;
+  }
+  .section__title {
+    font-size: 50px;
+    text-align: left;
+  }
+  .section__description {
+    text-align: left;
+    font-size: 18px;
+  }
+  .section__button {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    margin: 0;
+  }
+  .media {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: media;
+    -ms-flex-item-align: center;
+        align-self: center;
+        justify-self: end;
+    margin: 0;
+  }
+  .container {
+    max-width: 1300px;
+    display: -ms-grid;
+    display: grid;
+    gap: 50px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "logo ." "graphic section" ". media";
+  }
 }
 /*# sourceMappingURL=styles.css.map */

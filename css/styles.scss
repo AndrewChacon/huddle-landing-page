@@ -89,6 +89,8 @@ img {
     width: 200px;
     border-radius: 50px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -108,5 +110,51 @@ img {
   }
   &__icon {
     color: #fff;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .logo {
+    grid-area: logo;
+    width: 30%;
+  }
+  .graphic {
+    grid-area: graphic;
+  }
+  .section {
+    grid-area: section;
+    &__title {
+      font-size: 50px;
+      text-align: left;
+    }
+    &__description {
+      text-align: left;
+      font-size: 18px;
+    }
+    &__button {
+      justify-self: start;
+      margin: 0;
+    }
+  }
+  .media {
+    grid-area: media;
+    align-self: center;
+    justify-self: end;
+    margin: 0;
+  }
+  .container {
+    max-width: 1300px;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo ."
+      "graphic section"
+      ". media";
   }
 }
